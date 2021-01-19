@@ -23,7 +23,7 @@
 		  'type' =>'videos'
 		]);
 
-		$ch = curl_init(sprintf('%s?%s', 'http://api.serpstack.com/search', $queryString));
+		$ch = curl_init(sprintf('%s?%s?%s', 'http://api.serpstack.com/search', $queryString));
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 		$json = curl_exec($ch);
